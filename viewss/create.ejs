@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')  %>
+<body>
+    <!-- <nav>
+        <div class="site-title">
+            <a href="/"><h1>Node js</h1></a>
+            <p>Learn about EJS</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blogs</a></li>
+        </ul>
+    </nav> -->
+    <%- include('./partials/nav.ejs')  %>
+
+    <div class="create-blog content">
+        <form action = '/blogs' method = 'POST'>
+            <label for="title">Blog title : </label>
+            <input type="text" id="title" name="title" required>
+            <label for="snippet">Blog Snippet : </label>
+            <input type ="text" id="snippet" name="snippet" required>
+            <label for="body">Blog body : </label>
+            <textarea id="body" name="body" required></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs')  %>
+    
+</body>
+</html>
